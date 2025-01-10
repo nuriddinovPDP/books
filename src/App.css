@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "Rotterburg Stylish FREE";
+  src: url("../src/font/RotterburgStylishFREE-Regular.woff2") format("woff2"),
+    url("../src/font/RotterburgStylishFREE-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  background-color: #191919;
+}
+#tit {
+  font-family: Rotterburg Stylish FREE;
+  color: #ded2c6;
+  font-weight: 400;
+  font-size: 31px;
+  line-height: 34.1px;
+}
+.tex {
+  font-family: Rotterburg Stylish FREE;
+  color: #c9ac8c;
+  font-family: Rotterburg Stylish FREE;
+  font-size: 20px;
+  display: flex;
+  font-weight: 400;
+
+  line-height: 22px;
+  margin-top: 17px;
+}
+
+.box {
+  padding-top: 40px;
+  padding-bottom: 35px;
+  padding-left: 74px;
+  padding-right: 65px;
+  border-radius: 15px;
+  position: absolute;
+  background-color: #191919;
+  top: 290px;
+  left: 188px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3), 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.title {
+  font-family: Rotterburg Stylish FREE;
+  font-size: 31px;
+  font-weight: 400;
+  line-height: 34.1px;
+  text-align: left;
+  padding-bottom: 13px;
+  margin-left: 370px;
+  color: #c9ac8c;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.form {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.btn5 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 37px;
+  padding-right: 48px;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #c9ac8c;
+  border-radius: 15px;
+}
+.icon {
+  font-size: 16px;
+}
+.inp {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 27px;
+  width: 700px;
+  color: #fff;
+  border-radius: 15px;
+  background-color: #404040;
+}
+#item {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3), 0px 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  width: 160px;
+  padding-bottom: 10px;
+}
+#item2 {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3), 0px 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  width: 160px;
+  padding-bottom: 10px;
+}
+
+#image {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+#text-2 {
+  font-family: Rotterburg Stylish FREE;
+  color: #c9ac8c;
+}
+#k {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.1px;
+  text-align: left;
+  height: 159px;
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #fff;
+  width: 600px;
+  word-wrap: break-word; /* So'zlarni qatorga o‘tkazish */
+}
+.active {
+  color: #c9ac8c;
+}
+#it {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3), 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#list {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  overflow-y: hidden;
+  gap: 20px;
+  overflow-x: auto; /* Yonlama skroll uchun */
+  scroll-behavior: smooth; /* Silliq skroll */
+  white-space: nowrap; /* Elementlar qatorga joylashadi */
+}
+
+#list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Yonlama skroll */
+  scroll-behavior: smooth; /* Silliq skroll */
+  white-space: nowrap; /* Qator bo'lib qolmasin */
+}
+
+#list #item2 {
+  flex: 0 0 auto;
+}
+
+#tti {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+/* Scrollbarni yashirish */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Scrollbarni yashirish va scroll ishlashni saqlab qolish */
+#list {
+  scrollbar-width: none; /* Firefox uchun */
+  -ms-overflow-style: none; /* Internet Explorer 10+ uchun */
+}
+
+#list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari va Edge uchun */
+}
+#lol {
+  font-family: Rotterburg Stylish FREE;
+}

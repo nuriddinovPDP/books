@@ -1,0 +1,33 @@
+input:invalid[focused="true"] + p {
+  display: block;
+}
+
+input:invalid[focused="true"] {
+  border: 1px solid red;
+}
+.text {
+  margin-top: 12px;
+
+  display: none;
+  animation: shake 0.2s ease-in-out;
+  color: red;
+}
+input {
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

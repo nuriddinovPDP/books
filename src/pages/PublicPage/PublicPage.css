@@ -1,0 +1,78 @@
+.nav-link {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Har bir rang uchun hover va active holatlari */
+#a {
+  background-color: #1e3a8a; /* Asosiy ko'k rang */
+  color: white;
+}
+#a:hover {
+  background-color: #2563eb;
+  box-shadow: 0px 6px 10px rgba(37, 99, 235, 0.5); /* Ko'k soyali hover */
+}
+#a:active {
+  background-color: #1e40af;
+  box-shadow: 0px 2px 4px rgba(30, 58, 138, 0.6); /* Kuchsizroq soyali active */
+  transform: translateY(2px);
+}
+
+#b {
+  background-color: #15803d; /* Asosiy yashil rang */
+  color: white;
+}
+#b:hover {
+  background-color: #16a34a;
+  box-shadow: 0px 6px 10px rgba(22, 163, 74, 0.5); /* Yashil soyali hover */
+}
+#b:active {
+  background-color: #166534;
+  box-shadow: 0px 2px 4px rgba(22, 101, 52, 0.6); /* Kuchsizroq soyali active */
+  transform: translateY(2px);
+}
+
+#c {
+  background-color: #4f46e5; /* Asosiy indigo rang */
+  color: white;
+}
+#c:hover {
+  background-color: #6366f1;
+  box-shadow: 0px 6px 10px rgba(99, 102, 241, 0.5); /* Indigo soyali hover */
+}
+#c:active {
+  background-color: #4338ca;
+  box-shadow: 0px 2px 4px rgba(67, 56, 202, 0.6); /* Kuchsizroq soyali active */
+  transform: translateY(2px);
+}
+
+#d {
+  background-color: white; /* Asosiy oq rang */
+  color: black;
+}
+#d:hover {
+  background-color: #f3f4f6;
+  box-shadow: 0px 6px 10px rgba(243, 244, 246, 0.5); /* Oq soyali hover */
+}
+#d:active {
+  background-color: #e5e7eb;
+  box-shadow: 0px 2px 4px rgba(229, 231, 235, 0.6); /* Kuchsizroq soyali active */
+  transform: translateY(2px);
+}
+
+#e {
+  background-color: #7f1d1d; /* Asosiy pushti-qizil rang */
+  color: white;
+}
+#e:hover {
+  background-color: #991b1b;
+  box-shadow: 0px 6px 10px rgba(153, 27, 27, 0.5); /* Qizil soyali hover */
+}
+#e:active {
+  background-color: #7f1d1d;
+  box-shadow: 0px 2px 4px rgba(127, 29, 29, 0.6); /* Kuchsizroq soyali active */
+  transform: translateY(2px);
+}
