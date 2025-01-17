@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { API } from "../../utils/config";
 import { RiBookFill } from "react-icons/ri";
 import { BiHeadphone } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import { InpContext } from "../../context/InputContext";
 
 export default function Temuriy2() {
   const [data, setData] = useState(null);
@@ -16,12 +17,18 @@ export default function Temuriy2() {
       .catch((err) => console.log(err.response.data.message));
   }, []);
 
+  const { value } = useContext(InpContext);
+  const filterArray = data?.filter((el) =>
+    (el.first_name + el.last_name).toLowerCase().includes(value)
+  );
+  console.log(filterArray);
+  const books = value ? filterArray : data;
   return (
     <>
       <ul className="w-[1100px] flex gap-[20px] flex-wrap">
-        {data?.map((el) => (
+        {books?.map((el) => (
           <li className="w-[165px] h-[310px]" id="item" key={el.id}>
-            <Link to={`${el.id}`}>
+            <Link to={`/adiblar/${el.id}`}>
               <img
                 src={`https://books-backend-production-6f61.up.railway.app/${el.image}`}
                 alt="book image"

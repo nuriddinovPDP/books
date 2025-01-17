@@ -21,6 +21,11 @@ import { Iqtibos } from "./components/Iqtibos";
 import { Taqriz } from "./components/Taqriz";
 import SingleAuthor from "./pages/SinglePage/SingleAuthor";
 import AddBook from "./pages/AddBook/AddBook";
+import AddAuthor from "./pages/AddAuthor/AddAuthor";
+import Profile from "./pages/Profile/Profile";
+import Account from "./components/Account/Account";
+import Security from "./components/Security/Security";
+import Settings from "./components/Settings/Settings";
 
 function App() {
   const { isAuthenticated, setIsAuthenticated } = useAuth();
@@ -90,7 +95,28 @@ function App() {
       path: "/add-book",
       element: <AddBook />,
     },
-
+    {
+      path: "/add-author",
+      element: <AddAuthor />,
+    },
+    {
+      path: "/profile",
+      element: <Profile />,
+      children: [
+        {
+          path: "",
+          element: <Account />,
+        },
+        {
+          path: "security",
+          element: <Security />,
+        },
+        {
+          path: "settings",
+          element: <Settings />,
+        },
+      ],
+    },
     {
       path: "adiblar/:authorId",
       element: <SingleAuthor />,

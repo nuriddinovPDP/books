@@ -1,58 +1,80 @@
-import { useRef } from "react";
-import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { NavLink, Outlet } from "react-router-dom";
+import { ThemeContext } from "../../context/ThemeContext"; // ThemeContext import qilingan
+import { LangContext } from "../../context/LangContext";
+import { language } from "../../lang/lang";
+
 export default function Main() {
+  const { isDark } = useContext(ThemeContext); // isDark ni olish
+  const { lang, setLang } = useContext(LangContext);
+
   return (
-    <div className="bg-customBlack pt-[60px] pl-[150px] mt-[100px] pb-[100px]">
-      <h2 id="tit" className="ml-[390px]">
-        Asosiy kategoriyalar
+    <div
+      className={`pt-[60px] pl-[150px] mt-[100px] pb-[100px] ${
+        isDark ? "bg-[#fff] text-[#191919]" : "bg-[#191919] text-[#fff]"
+      }`}
+    >
+      <h2
+        id="tit"
+        className={`ml-[390px] ${isDark ? "text-[#191919]" : "text-[#fff]"}`}
+      >
+        {language[lang].category.title}
       </h2>
-      <ul className="flex items-center gap-[40px] ml-[240px] mt-[20px] mb-[40px] ">
+      <ul className="flex items-center gap-[40px] ml-[200px] mt-[20px] mb-[40px]">
         <li>
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? "text-[20px] text-customYellow"
-                : "text-[20px] text-gray-500"
+                ? `${
+                    isDark ? "text-[#FFC107]" : "text-customYellow"
+                  } text-[20px]`
+                : `${isDark ? "text-gray-700" : "text-gray-500"} text-[20px]`
             }
             to={""}
           >
-            Temuriylar davri
+            {language[lang].category.temuriy}
           </NavLink>
         </li>
         <li>
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? "text-[20px] text-customYellow"
-                : "text-[20px] text-gray-500"
+                ? `${
+                    isDark ? "text-[#FFC107]" : "text-customYellow"
+                  } text-[20px]`
+                : `${isDark ? "text-gray-700" : "text-gray-500"} text-[20px]`
             }
             to={"jadid"}
           >
-            Jadid adabiyooti
+            {language[lang].category.jadid}
           </NavLink>
         </li>
         <li>
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? "text-[20px] text-customYellow"
-                : "text-[20px] text-gray-500"
+                ? `${
+                    isDark ? "text-[#FFC107]" : "text-customYellow"
+                  } text-[20px]`
+                : `${isDark ? "text-gray-700" : "text-gray-500"} text-[20px]`
             }
             to={"sovet"}
           >
-            Sovet davri
+            {language[lang].category.sovet}
           </NavLink>
         </li>
         <li>
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? "text-[20px] text-customYellow"
-                : "text-[20px] text-gray-500"
+                ? `${
+                    isDark ? "text-[#FFC107]" : "text-customYellow"
+                  } text-[20px]`
+                : `${isDark ? "text-gray-700" : "text-gray-500"} text-[20px]`
             }
             to={"mustaqil"}
           >
-            Mustaqillik davri
+            {language[lang].category.mustaqil}
           </NavLink>
         </li>
       </ul>

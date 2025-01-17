@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Carousel.css";
-
+import img from "../../../public/img.png";
+import { LangContext } from "../../context/LangContext";
+import { language } from "../../lang/lang";
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { lang, setLang } = useContext(LangContext);
 
   const slides = [
-    { image: "img.jpg", caption: "Temuriylar davri adabiyoti" },
-    { image: "img.jpg", caption: "Asar va olimlar" },
-    { image: "img.jpg", caption: "Ulug‘bek davri" },
-    { image: "img.jpg", caption: "Boburiylar merosi" },
+    { image: img, caption: language[lang].carousel.text },
+    { image: img, caption: language[lang].carousel.text2 },
+    { image: img, caption: language[lang].carousel.text3 },
+    { image: img, caption: language[lang].carousel.text4 },
   ];
 
   useEffect(() => {
