@@ -151,7 +151,7 @@ export const language = {
       mustaqil: "Independent Era",
     },
     singlebook: {
-      page: "Number of Pages:",
+      page: "Pages:",
       year: "Published:",
       janr: "Genre:",
       nashr: "Publisher",

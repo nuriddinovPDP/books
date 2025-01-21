@@ -7,6 +7,8 @@ import img from "../../assets/img2.png";
 export default function Login() {
   const { isAuthenticated, setIsAuthenticated } = useAuth();
   const [err, setErr] = useState("");
+  const [text, setText] = useState("");
+
   const navigate = useNavigate();
   const [values, setValues] = useState({
     email: "",
@@ -25,7 +27,7 @@ export default function Login() {
         setIsAuthenticated(true);
         navigate("/");
       })
-      .catch((err) => setErr(err.message));
+      .catch((err) => setErr(err.response.data.message));
   };
   return (
     <div className="flex h-screen w-screen items-center justify-center bg-gray-100">
@@ -62,7 +64,7 @@ export default function Login() {
                 className="w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
-
+            {err && <p className="text-red-500">{err}</p>}
             <button
               type="submit"
               className="w-full py-3 bg-gray-900 text-white font-semibold text-xl rounded-full hover:bg-gray-800"

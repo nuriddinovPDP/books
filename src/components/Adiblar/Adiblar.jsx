@@ -25,7 +25,9 @@ export default function Adiblar() {
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? `${isDark ? "text-[#FFC107]" : "text-gray-500"} text-[20px]`
+                ? `${
+                    isDark ? "text-customYellow" : "text-customYellow"
+                  } text-[20px]`
                 : `${isDark ? "text-gray-700" : "text-gray-500"} text-[20px]`
             }
             to={""}
