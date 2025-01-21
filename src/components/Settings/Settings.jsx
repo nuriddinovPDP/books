@@ -51,6 +51,9 @@ export default function Settings() {
             <option value="ru" selected={lang == "ru"}>
               RU
             </option>
+            <option value="tr" selected={lang == "tr"}>
+              TR
+            </option>
           </select>
         </div>
       </div>
